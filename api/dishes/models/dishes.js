@@ -1,20 +1,21 @@
 'use strict';
+const marked = require('marked');
 
-/**
- * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
- * to customize this model
- */
-
+marked.setOptions({
+  headerIds: false
+})
 
 module.exports = {
   lifecycles: {
     beforeCreate: async data => {
-
-      strapi.log.info('JHOHOIHOHOHOHOHOHOHOHOHO')
-      console.log('Estamos aca chavallllllllllll', model.body)
+      if(data.body) {
+        data.bodyHTML = marked(data.body)
+      }
     },
     beforeUpdate: async (_, data) => {
-      data.title = 'HOLA'
+      if(data.body) {
+        data.bodyHTML = marked(data.body)
+      }
     }
   }
 };
