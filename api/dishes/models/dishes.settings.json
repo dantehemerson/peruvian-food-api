@@ -12,13 +12,17 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "private": false,
+      "required": true
     },
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "private": true,
+      "required": true
     },
     "cover": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -26,10 +30,14 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "bodyHTML": {
       "type": "text"
+    },
+    "authorName": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -1,3 +1,3 @@
-# Strapi application
+# Peruvian Food API
 
-A quick description of your strapi application
+> Powered by Strapi
