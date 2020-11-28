@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dishes",
+  "info": {
+    "name": "dishes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "bodyHTML": {
+      "type": "text"
+    }
+  }
+}
