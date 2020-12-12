@@ -14,7 +14,7 @@
     "knex": "<0.20.0",
     "lodash": "^4.17.20",
     "marked": "^1.2.5",
-    "sqlite3": "latest",
+    "pg": "^8.5.1",
     "strapi": "3.3.4",
     "strapi-admin": "3.3.4",
     "strapi-connector-bookshelf": "3.3.4",
